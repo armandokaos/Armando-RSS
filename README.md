@@ -1,12 +1,12 @@
-# Armando News
+# Armando RSS
 
 ## Overview
 
-This project aims to build an automated press release feed on Geo, sourcing press releases from Chainwire ([https://chainwire.org/feed/](https://chainwire.org/feed/)).
+This project aims to build a press release feed on Geo, sourcing press releases from Chainwire ([https://chainwire.org/feed/](https://chainwire.org/feed/)).
 
 ## Data Model: Press Release
 
-The Press Release type on Geo will use the following properties:
+The Press Release type on will use the following properties:
 
 | Property       | Geo ID                                 | Description                                        |
 |---------------|--------------------------------------|--------------------------------------------------|
