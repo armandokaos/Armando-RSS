@@ -5,8 +5,6 @@ const requestBody = JSON.stringify({
   spaceName: "Armando RSS",
 });
 
-console.log("TEST REQUEST BODY:", requestBody); // 🛑 Vérification avant envoi
-
 const result = await fetch("https://api-testnet.grc-20.thegraph.com/deploy", {
   method: "POST",
   body: requestBody,
