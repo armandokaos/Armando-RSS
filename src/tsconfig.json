@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    // Activer les fonctionnalités modernes
     "lib": ["ESNext", "DOM"],
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "moduleDetection": "force",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
+    "outDir": "../dist",
 
     // Compatibilité Node.js
     "resolveJsonModule": true,
@@ -23,5 +22,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false
-  }
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["../dist"]
 }

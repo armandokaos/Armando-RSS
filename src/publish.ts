@@ -1,4 +1,4 @@
-import {wallet} from "./wallet";
+import { account, wallet } from "./wallet.js";
 
 async function publishData(spaceId: string, cid: string) {
 	const result = await fetch(`https://api-testnet.grc-20.thegraph.com/space/${spaceId}/edit/calldata`, {

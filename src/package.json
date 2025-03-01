@@ -2,8 +2,14 @@
   "name": "clone-space",
   "module": "main.ts",
   "type": "module",
+  "scripts": {
+    "build": "tsc --project src/tsconfig.json",
+    "start": "ts-node src/main.ts"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
