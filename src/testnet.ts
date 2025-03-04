@@ -1,20 +1,35 @@
-import type {Chain} from "viem";
-import {config} from "./config.js";
+import type { Chain } from "viem";
 
 export const TESTNET: Chain = {
-	id: 19411, // or 80451 for mainnet
-	name: "Geo Genesis",
-	nativeCurrency: {
-		name: "Ethereum",
-		symbol: "ETH",
-		decimals: 18,
-	},
-	rpcUrls: {
-		default: {
-			http: [config.rpc],
-		},
-		public: {
-			http: [config.rpc],
-		},
-	},
+  id: 1,
+  name: "Testnet",
+  network: "testnet",
+  nativeCurrency: {
+    name: "Ether",
+    symbol: "ETH",
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://testnet-rpc-url"],
+    },
+    public: {
+      http: ["https://public-testnet-rpc-url"],
+    },
+  },
+};
+
+export const grc20Testnet: Chain = {
+  id: 19411,
+  name: "Geogenesis Testnet",
+  network: "geogenesis-testnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "ETH",
+    symbol: "ETH",
+  },
+  rpcUrls: {
+    default: { http: ["https://rpc-geo-test-zc16z3tcvf.t.conduit.xyz/"] },
+    public: { http: ["https://rpc-geo-test-zc16z3tcvf.t.conduit.xyz/"] },
+  },
 };

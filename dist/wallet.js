@@ -1,5 +1,5 @@
 import { execSync } from 'child_process';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import { Wallet } from 'ethers';
 dotenv.config();
 if (!process.env.RPC_URL) {

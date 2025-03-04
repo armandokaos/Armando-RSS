@@ -1,5 +1,5 @@
 import { Ipfs, Relation } from "@graphprotocol/grc-20";
-import { wallet } from "./wallet"; // Assure-toi d'avoir un fichier wallet.ts
+import { wallet } from "./wallet.js"; // Assure-toi d'avoir un fichier wallet.ts
 
 const GEO_RELATION_URL = "https://testnet-api.geo.xyz/spaces/edit";
 
@@ -24,7 +24,7 @@ export async function writeRelation(fromId: string, toId: string, relationType: 
     // 2️⃣ Publier sur IPFS
     const ipfsHash = await Ipfs.publishEdit({
       name: editName,
-      author: wallet.account.address,
+      author: wallet.address,
       ops: [relationOp],
     });
 
@@ -37,7 +37,7 @@ export async function writeRelation(fromId: string, toId: string, relationType: 
       id: editId,
       name: editName,
       ops: [{ type: 2, relation: relationOp }], // Type 2 = Relation
-      authors: [wallet.account.address],
+      authors: [wallet.address],
     };
 
     // 4️⃣ Envoyer la requête POST à Geo

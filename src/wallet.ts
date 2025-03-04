@@ -1,21 +1,23 @@
 import { execSync } from 'child_process';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
+import { resolve } from 'path';
 import { Wallet } from 'ethers';
 
-dotenv.config();
+// Force dotenv to load .env from the src directory
+dotenv.config({ path: resolve('src/.env') });
 
 if (!process.env.RPC_URL) {
-  console.error("No RPC URL configured. Set RPC_URL in .env file.");
+  console.error("No RPC URL configured. Set RPC_URL in src/.env file.");
   process.exit(1);
 }
 
 if (!process.env.PRIVATE_KEY) {
-  console.error("No wallet configured. Set PRIVATE_KEY in .env file.");
+  console.error("No wallet configured. Set PRIVATE_KEY in src/.env file.");
   process.exit(1);
 }
 
 if (!process.env.WALLET_ADDRESS) {
-  console.error("No wallet address configured. Set WALLET_ADDRESS in .env file.");
+  console.error("No wallet address configured. Set WALLET_ADDRESS in src/.env file.");
   process.exit(1);
 }
 
@@ -23,7 +25,14 @@ const wallet = new Wallet(process.env.PRIVATE_KEY);
 
 export const account = {
   address: process.env.WALLET_ADDRESS,
-  async sendTransaction(tx: { to: string; value: bigint; data: string; maxFeePerGas?: bigint; maxPriorityFeePerGas?: bigint; gasLimit?: bigint }) {
+  async sendTransaction(tx: {
+    to: string;
+    value: bigint;
+    data: string;
+    maxFeePerGas?: bigint;
+    maxPriorityFeePerGas?: bigint;
+    gasLimit?: bigint;
+  }) {
     try {
       // Use fixed gas values for testing
       const gasLimit = '0x7A120'; // 500,000
@@ -104,20 +113,4 @@ export const account = {
   }
 };
 
-// Execute if running directly
-if (import.meta.url === new URL(import.meta.url).href) {
-  console.log('Wallet configured successfully');
-  console.log('Address:', account.address);
-  
-  try {
-    // Get balance
-    const balanceCmd = `curl -s -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"eth_getBalance","params":["${account.address}","latest"],"id":1}' "${process.env.RPC_URL}"`;
-    const balanceResponse = execSync(balanceCmd).toString();
-    const balance = BigInt(JSON.parse(balanceResponse).result);
-    console.log('Balance:', balance.toString());
-    process.exit(0);
-  } catch (error: unknown) {
-    console.error('Failed to get balance:', error);
-    process.exit(1);
-  }
-}export { wallet };
+export { wallet };

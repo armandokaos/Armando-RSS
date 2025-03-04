@@ -10,6 +10,12 @@ const result = await fetch("https://api-testnet.grc-20.thegraph.com/deploy", {
   body: requestBody,
 });
 
-const { spaceId } = await result.json();
-console.log("SPACE ID", spaceId);
+const responseText = await result.text();
+console.log("🔍 API Response:", responseText);
 
+try {
+  const responseJson = JSON.parse(responseText);
+  console.log("✅ Parsed JSON:", responseJson);
+} catch (error) {
+  console.error("❌ Erreur JSON:", error);
+}
