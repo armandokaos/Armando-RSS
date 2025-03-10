@@ -98,7 +98,7 @@ Press releases are **public domain content** and serve as the primary source of 
 
 ---`
 
-## Press release Type
+## ⚙️ Type: Press release 
 
 - Relation A : "Press release" *𝑁𝑇𝐸𝑝3𝐸𝐵𝑎𝐻𝑅𝑤1𝑒𝐶𝐷𝑖𝑉𝑆𝑔𝑁9𝑐* → *𝑃𝑟𝑜𝑝𝑒𝑟𝑡𝑖𝑒𝑠* = *9𝑧𝐵𝐴𝐷𝑎𝑌𝑧𝑦𝑓𝑧𝑦𝐹𝐽𝑛4𝐺𝑈1𝑐𝐶* → "Properties" *9𝑧𝐵𝐴𝐷𝑎𝑌𝑧𝑦𝑓𝑧𝑦𝐹𝐽𝑛4𝐺𝑈1𝑐𝐶*  
 
