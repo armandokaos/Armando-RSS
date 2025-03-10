@@ -39,7 +39,7 @@ Press releases are **public domain content** and serve as the primary source of 
 
 🔹 Created the **"Chainwire" entity**\
 🔹 Created the **"Press Release" type**\
-🔹 Added **key properties** to **Press Release**\
+🔹 Added **key properties** to **Press release**\
 🔹 Published **test press releases**\
 🔹 Published **scraped press releases**\
 🔹 Improved scrapers with **`scraper-v2.ts`** to extract **clean press release content**\
