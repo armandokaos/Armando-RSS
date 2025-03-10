@@ -26,7 +26,7 @@ Press releases are **public domain content** and serve as the primary source of 
 
 ---
 
-## ✅ Project Timeline
+## ✅ Project timeline
 
 ### 📌 Initial setup
 
