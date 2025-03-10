@@ -89,9 +89,7 @@ Press releases are **public domain content** and serve as the primary source of 
 
 ---
 
-## 📌 Important project IDs & URLs
-
-## 📌 Important project IDs & URLs
+## 📌 Important project IDs 
 
 - **Geo Testnet Space ID** → [`VoNCdYgAuRjEYgsRrzQ5W4NC`](https://geogenesis-git-feat-testnet-geo-browser.vercel.app/space/NCdYgAuRjEYgsRrzQ5W4NC)
 - **Chainwire ID** → [`6RrWbaDFvzrynhMyqZz4Gf`](https://geogenesis-git-feat-testnet-geo-browser.vercel.app/space/NCdYgAuRjEYgsRrzQ5W4NC/6RrWbaDFvzrynhMyqZz4Gf)
