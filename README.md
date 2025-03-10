@@ -96,16 +96,7 @@ Press releases are **public domain content** and serve as the primary source of 
 - **Press Release ID** → `RZauYFG6886WwWHiq6y5JM`
 - **Example Scraped Press Release** → `R83U758B6FfowvJCbxRhaB`
 
----
-
-## 📄 Relations Created
-
-- **Relation A**: Press Release → Properties\
-  `NTEp3EBaHRw1eCDiVSgN9c → Properties = 9zBADaYzyfzyFJn4GU1cC`
-- **Relation B**: Properties → Types\
-  `9zBADaYzyfzyFJn4GU1cC → Types = Jfmby78N4BCseZinBmdVov (Property)`
-- **Relation C**: Properties → Type\
-  `9zBADaYzyfzyFJn4GU1cC → Types = Jfmby78N4BCseZinBmdVov`
+---`
 
 ## ### 1. Created relations
 
