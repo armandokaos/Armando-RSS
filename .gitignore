@@ -1,4 +1,31 @@
-.DS_Store
+# Exclure tous les fichiers write sauf ceux à garder
+src/write-*.ts
+!src/write-test-v2.ts
+!src/write-test-v7.ts
+!src/write-properties-properties.ts
+!src/write-pro-v2.ts
+!src/write-press-release-v2.ts
+!src/write-fuu.ts
+!src/write-triples-ent.ts
+
+# Exclure tous les fichiers publish sauf ceux à garder
+src/publish-*.ts
+!src/publish-test-v2.ts
+!src/publish-test-v7.ts
+!src/publish-properties.ts
+!src/publish-pro-v2.ts
+!src/publish-press-release-v2.ts
+!src/publish-fuu.ts
+
+# Exclure les dossiers et fichiers inutiles
 node_modules/
-package-lock.json
+dist/
+out/
+*.log
+.DS_Store
 .env
+pnpm-lock.yaml
+
+# Exclure les fichiers de configuration inutiles
+.vscode/
+.idea/

@@ -3,7 +3,6 @@ import type { Chain } from "viem";
 export const TESTNET: Chain = {
   id: 1,
   name: "Testnet",
-  network: "testnet",
   nativeCurrency: {
     name: "Ether",
     symbol: "ETH",
@@ -22,11 +21,10 @@ export const TESTNET: Chain = {
 export const grc20Testnet: Chain = {
   id: 19411,
   name: "Geogenesis Testnet",
-  network: "geogenesis-testnet",
   nativeCurrency: {
-    decimals: 18,
     name: "ETH",
     symbol: "ETH",
+    decimals: 18,
   },
   rpcUrls: {
     default: { http: ["https://rpc-geo-test-zc16z3tcvf.t.conduit.xyz/"] },

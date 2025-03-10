@@ -1,100 +1,112 @@
 # Armando RSS
 
-## 📌 Project Description
+📌 Project description
+Armando RSS is a scraping project that automatically collects press releases from Chainwire’s RSS feed and publishes them on Geo Testnet in the Armando RSS space.
 
-Armando RSS is a scraping project that automatically collects press releases from the [Chainwire](https://chainwire.org/feed/) RSS feed and publishes them on Geo Testnet in the **Armando News** space.
+🎯 Project motivation
+Understanding Geo beyond its user interface
+Until now, my interaction with Geo has mostly been through its interface. With this project, I want to go further by interacting with Geo Testnet programmatically, using the API and publishing structured data on the blockchain.
 
-## 🛠 Technologies Used
+Experimenting with a concrete application of GRC-20
+I have been exploring GRC-20 since its release on November 21, 2024, and this project is the ideal opportunity to test its potential in a real-world use case. By integrating press releases into Geo, I want to understand how to structure, store, and efficiently query data using this standard.
 
-- **TypeScript**: Main programming language.
-- **Node.js**: Runtime environment.
-- **ts-node/esm**: Execution of TypeScript scripts.
-- **Geo Testnet API**: Publishing press releases on Geo Testnet.
-- **JSON Database**: Temporary storage of press releases before publishing.
-- **RSS Parsing**: Extracting data from Chainwire.
+Building on my work with RSS feeds
+Since I started working with news, I have been convinced that RSS feeds are a highly effective data source. I spent months working on RSS sources and processing them with a RAG tool, achieving excellent results, but this exploration was interrupted. With Armando RSS, I am returning to the original idea, this time developing it autonomously, leveraging RSS technology to automatically publish Chainwire press releases on Geo and eventually expand to other RSS feeds.
 
-## 🎯 Project Motivation
+Automating Press Release collection and publishing
+Press releases are public domain content and serve as the primary source of information for product launches and partnership announcements in the Web3 ecosystem. This project aims to automate their retrieval and publication on Geo Mainnet.
 
-### Understanding Geo beyond its user interface
+✅ Project timeline
+📌 Initial Setup & Development
+🔹 Investigated documentation hackathon
+🔹 Created the Chainwire RSS scraper → scraper.ts
+🔹 Deployed the Armando RSS space on Geo Testnet → NCdYgAuRjEYgsRrzQ5W4NC
+🔹 Received Testnet tokens on 03/05/2025
 
-Until now, my interaction with Geo has been primarily through its interface. With this project, I want to go further by interacting with Geo Testnet programmatically, using the API and publishing structured data on the blockchain.
+📌 Entities
+🔹 Created the "Chainwire" entity
+🔹 Created the "Press Release" type
+🔹 Added key properties to Press Release
+🔹 Published test press releases
+🔹 Published scraped press releases
+🔹 Improved scrapers with scraper-v2.ts to extract clean press release content
+🔹 Published scraped press releases with clean content on Geo Testnet
 
-### Experimenting with a concrete application of GRC-20
+📌 Other operations
+🔹 Successfully searched triples → search.ts
+🔹 Successfully deleted triples → delete-triples.ts & publish-delete-triple.ts
 
-I have been exploring GRC-20 since its release on November 21, 2024, and this project is an ideal opportunity to test its potential in a real-world use case. By integrating press releases into Geo, I aim to understand how to structure, store, and query data efficiently using this standard.
+📌 Mainnet
+🔹 Deployed a space Armando RSS on Mainnet
+🔹 Created a new wallet using Export Wallet
+🔹 Cloned the repository grc-20-ts
+🔹 Started adding new scripts:
 
-### Building on my work with RSS feeds
+Mainnet.ts
+smart-wallet.ts
+write-url-v2.ts
+publish-url.ts
+❌ Challenges & Issues
+⚠ Failed to delete an entity (Testnet issue)
+⚠ Failed to delete relations
+⚠ Failed to publish press release content in Blocks
+⚠ Unable to create a structured table in Blocks for press releases
 
-Since I started working with news, I have become convinced that RSS feeds are a highly efficient source of data. I spent months working on RSS sources and processing them with a RAG tool, achieving excellent results, but that exploration was interrupted. With Armando RSS, I am returning to the roots of my idea, this time developing it independently, to leverage RSS technology and automatically publish Chainwire press releases on Geo, and later integrate other RSS feeds.
+✅ Key learnings
+📌 Technical Improvements
+✔ Strengthened Git & GitHub knowledge
+✔ Improved repository management & code structuring
+✔ Gained better handling of blockchain data workflows
 
-### Automating Press Release Collection and Publishing
+📌 Geo-Specific Learnings
+✔ Deeper understanding of Geo's data publishing process
+✔ Learned how to write and publish structured data using the Geo Testnet API
+✔ Understood how triples, entities, and relationships work programmatically
 
-Press releases are public domain content and serve as the primary source of information for product launches and partnership announcements in the Web3 ecosystem. This project aims to automate their retrieval and publication on Geo.
+📌 Important IDs
+Geo Testnet Space ID → VoNCdYgAuRjEYgsRrzQ5W4NC
+Chainwire ID → 6RrWbaDFvzrynhMyqZz4Gf
+Press Release ID → RZauYFG6886WwWHiq6y5JM
+Example Scraped Press Release → R83U758B6FfowvJCbxRhaB
+📄 Relations Created
+Relation A: Press Release → Properties
+NTEp3EBaHRw1eCDiVSgN9c → Properties = 9zBADaYzyfzyFJn4GU1cC
 
-## 📂 Project Structure
+Relation B: Properties → Types
+9zBADaYzyfzyFJn4GU1cC → Types = Jfmby78N4BCseZinBmdVov (Property)
 
-```plaintext
+Relation C: Properties → Type
+9zBADaYzyfzyFJn4GU1cC → Types = Jfmby78N4BCseZinBmdVov
+
+📄 Data Model: Press Release
+Property Geo ID Description
+Name LuBWqZAu6pz54eiJS5mLv8 The title of the press release
+Publish Date KPNjGaLx5dKofVhT6Dfw22 The publication date and time
+Web URL 93stf6cgYvBsdPruRzq1KK The original link to the press release
+Blocks QYbjCM6NT9xmh2hFGsqpQX The content of the press release stored in Blocks
+Publisher Lc4JrkpMUPhNstqs7mvnc5 The wire service publishing the press release
+📂 Project Structure
+graphql
+Copiar
+Editar
 Armando-RSS/
-│── data/              # Contains the write-triple.ts file
-│── src/
-│   ├── scraper.ts     # Scraping and storage script
-│   ├── publisher.ts   # Publishing script for Geo Testnet
-│── package.json       # Node.js dependencies and scripts
-│── tsconfig.json      # TypeScript configuration
-│── README.md          # Documentation
-```
-
-## 🚀 Installation and Setup
-
-### 1. Clone the Project
-
-```sh
-git clone https://github.com/armandokaos/Armando-RSS.git
-cd Armando-RSS
-```
-
-### 2. Install Dependencies
-
-```sh
-npm install
-```
-
-## 🔄 Running the Scraper
-
-To fetch press releases from Chainwire and store them locally:
-
-```sh
-node --loader ts-node/esm src/scraper.ts
-```
-
-## 📡 Publishing to Geo Testnet
-
-After scraping, publish the data to Geo Testnet:
-
-```sh
-node --loader ts-node/esm src/publisher.ts
-```
-
-The Geo Testnet space ID is: `VoNCdYgAuRjEYgsRrzQ5W4NC`.
-
-## ✅ Next Steps
-
-- [x] Add a description to the Geo Testnet space
-- [x] Add an avatar to the Geo Testnet space
-- [x] Create the "Press Release" entity on Geo Testnet
-- [ ] Publish 5 press releases on Geo Testnet ⏳
-
-📌 **Each step is validated before moving to the next one.**
-
-## 📄 Data Model: Press Release
-
-The Press Release type will use the following properties:
-
-| Property       | Geo ID                                 | Description                                        |
-|---------------|--------------------------------------|--------------------------------------------------|
-| **Name**      | `LuBWqZAu6pz54eiJS5mLv8`            | The title of the press release                 |
-| **Publish Date** | `KPNjGaLx5dKofVhT6Dfw22`         | The publication date and time                         |
-| **Web URL**   | `93stf6cgYvBsdPruRzq1KK`           | The original link to the press release         |
-| **Blocks**    | `QYbjCM6NT9xmh2hFGsqpQX`           | The content of the press release stored in blocks  |
-| **Publisher** | `Lc4JrkpMUPhNstqs7mvnc5`           | The wire service publishing the press release |
-
+│── data/ # Contains intermediate storage files
+│── src/ # Main scripts directory
+│   ├── scraper.ts # Fetches Chainwire RSS feed
+│   ├── scraper-v2.ts # Improved scraper for Chainwire RSS feed
+│   ├── publisher.ts # Publishes data to Geo Testnet
+│   ├── testnet.ts # Functions for interacting with Geo Testnet
+│   ├── wallet.ts # Wallet interaction utilities
+│   ├── config.ts # Configuration and API keys
+│   ├── write-.ts # Scripts to generate and format structured data
+│   ├── publish-.ts # Scripts to publish data on Geo
+│   ├── deploy-space.ts # Space deployment script
+│── package.json # Node.js dependencies and scripts
+│── tsconfig.json # TypeScript configuration
+│── README.md # Documentation
+📌 Next Steps
+🛠️ Improving content publication in Blocks
+🖨️ Format press release names for consistency with Geo policies
+🔄 Refining relation management for structured data
+🚀 Transitioning from Testnet to Mainnet deployment
+🔮 Becoming able to publish any content on Geo Genesis with full control over Blocks, tables, and ima
