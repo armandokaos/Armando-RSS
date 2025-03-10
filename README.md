@@ -97,7 +97,6 @@ Press releases are **public domain content** and serve as the primary source of 
 - **Example Scraped Press Release** → [`M9XSMqSXCJW9qU69hyqpMv`](https://geogenesis-git-feat-testnet-geo-browser.vercel.app/space/NCdYgAuRjEYgsRrzQ5W4NC/M9XSMqSXCJW9qU69hyqpMv)
 
 
----`
 
 ## ⚙️ Type: Press release 
 
